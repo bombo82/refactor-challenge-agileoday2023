@@ -9,8 +9,9 @@ public class FizzBuzz implements FizzBuzzInterface {
         if (number % fizzDivisorAndWord.getDivisor() == 0) {
             accumulator += fizzDivisorAndWord.getWord();
         }
-        if (number % 5 == 0) {
-            accumulator += "Buzz";
+        var buzzDivisorAndWord = new DivisorAndWord(5, "Buzz");
+        if (number % buzzDivisorAndWord.getDivisor() == 0) {
+            accumulator += buzzDivisorAndWord.getWord();
         }
 
         if (!accumulator.isEmpty()) {
