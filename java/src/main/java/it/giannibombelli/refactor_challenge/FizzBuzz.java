@@ -6,6 +6,8 @@ import java.util.Map;
 public class FizzBuzz implements FizzBuzzInterface {
     @Override
     public String say(int number) {
+        String accumulator = "";
+
         if (number % 3 == 0 && number % 5 ==0) {
             return "Fizz" + "Buzz";
         }
@@ -16,6 +18,11 @@ public class FizzBuzz implements FizzBuzzInterface {
             return "Buzz";
         }
 
+        if (!accumulator.isEmpty()) {
+            return accumulator;
+        }
+
         return String.valueOf(number);
+
     }
 }
