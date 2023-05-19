@@ -5,9 +5,6 @@ public class FizzBuzz implements FizzBuzzInterface {
     public String say(int number) {
         String accumulator = "";
 
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "Fizz" + "Buzz";
-        }
         if (number % 3 == 0) {
             accumulator += "Fizz";
         }
