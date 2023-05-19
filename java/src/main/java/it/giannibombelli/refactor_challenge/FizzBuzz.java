@@ -5,8 +5,9 @@ public class FizzBuzz implements FizzBuzzInterface {
     public String say(int number) {
         String accumulator = "";
 
-        if (number % 3 == 0) {
-            accumulator += "Fizz";
+        var fizzDivisorAndWord = new DivisorAndWord(3, "Fizz");
+        if (number % fizzDivisorAndWord.getDivisor() == 0) {
+            accumulator += fizzDivisorAndWord.getWord();
         }
         if (number % 5 == 0) {
             accumulator += "Buzz";
