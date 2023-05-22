@@ -10,10 +10,10 @@ class FizzBuzz(
 
         var accumulator = ""
         for (divisorAndWord in divisorAndWordList) {
-            if (number % divisorAndWord.divisor == 0) {
-                accumulator += divisorAndWord.word
+            accumulator += if (number % divisorAndWord.divisor == 0) {
+                divisorAndWord.word
             } else {
-                accumulator += ""
+                ""
             }
         }
 
