@@ -7,12 +7,6 @@ class FizzBuzz(
     )
 ) : FizzBuzzInterface {
     override fun say(number: Int): String {
-
-        var accumulator = ""
-        for (divisorAndWord in divisorAndWordList) {
-            accumulator += divisorAndWord.getWordOrEmpty(number)
-        }
-
         return divisorAndWordList
             .joinToString("") { it.getWordOrEmpty(number) }
             .ifEmpty { number.toString() }
