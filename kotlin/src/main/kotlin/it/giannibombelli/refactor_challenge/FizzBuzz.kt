@@ -5,16 +5,12 @@ class FizzBuzz : FizzBuzzInterface {
         var accumulator = ""
 
         val fizzDivisorAndWord = Pair(3, "Fizz")
-        val divisorAndWordList = listOf(fizzDivisorAndWord)
+        val buzzDivisorAndWord = Pair(5, "Buzz")
+        val divisorAndWordList = listOf(fizzDivisorAndWord, buzzDivisorAndWord)
         for (divisorAndWord in divisorAndWordList) {
             if (number % divisorAndWord.first == 0) {
                 accumulator += divisorAndWord.second
             }
-        }
-
-        val buzzDivisorAndWord = Pair(5, "Buzz")
-        if (number % buzzDivisorAndWord.first == 0) {
-            accumulator += buzzDivisorAndWord.second
         }
 
         return accumulator.ifEmpty { number.toString() }
