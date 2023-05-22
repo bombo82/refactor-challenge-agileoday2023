@@ -8,10 +8,10 @@ class FizzBuzz : FizzBuzzInterface {
 
         var accumulator = ""
         if (number % 3 == 0) {
-            return "Fizz"
+            accumulator += "Fizz"
         }
         if (number % 5 == 0) {
-            return "Buzz"
+            accumulator += "Buzz"
         }
 
         if (accumulator.isNotEmpty()) {
