@@ -12,7 +12,8 @@ class FizzBuzz : FizzBuzzInterface {
 
         if (accumulator.isNotEmpty()) {
             return accumulator
+        } else {
+            return number.toString()
         }
-        return number.toString()
     }
 }
