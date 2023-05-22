@@ -4,16 +4,12 @@ class FizzBuzz : FizzBuzzInterface {
     override fun say(number: Int): String {
         var accumulator = ""
 
-        val fizzDivisor = 3
-        val fizzWord = "Fizz"
-        val fizzDivisorAndWord = Pair(fizzDivisor, fizzWord)
+        val fizzDivisorAndWord = Pair(3, "Fizz")
         if (number % fizzDivisorAndWord.first == 0) {
             accumulator += fizzDivisorAndWord.second
         }
 
-        val buzzDivisor = 5
-        val buzzWord = "Buzz"
-        val buzzDivisorAndWord = Pair(buzzDivisor, buzzWord)
+        val buzzDivisorAndWord = Pair(5, "Buzz")
         if (number % buzzDivisorAndWord.first == 0) {
             accumulator += buzzDivisorAndWord.second
         }
