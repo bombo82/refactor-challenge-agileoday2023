@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 internal class FizzBuzzTest {
 
     @Test
-    internal fun simpleNumber() {
+    internal fun `no match`() {
         val fizzBuzz = FizzBuzz(listOf(
             DivisorAndWord(3, "Fizz"),
             DivisorAndWord(5, "Buzz")
@@ -16,25 +16,17 @@ internal class FizzBuzzTest {
     }
 
     @Test
-    internal fun fizz() {
+    internal fun `simple match`() {
         val fizzBuzz = FizzBuzz(listOf(
             DivisorAndWord(3, "Fizz"),
             DivisorAndWord(5, "Buzz")
         ))
         assertEquals("Fizz", fizzBuzz.say(3))
-    }
-
-    @Test
-    internal fun buzz() {
-        val fizzBuzz = FizzBuzz(listOf(
-            DivisorAndWord(3, "Fizz"),
-            DivisorAndWord(5, "Buzz")
-        ))
         assertEquals("Buzz", fizzBuzz.say(5))
     }
 
     @Test
-    internal fun fizzBuzz() {
+    internal fun `multiple match`() {
         val fizzBuzz = FizzBuzz(listOf(
             DivisorAndWord(3, "Fizz"),
             DivisorAndWord(5, "Buzz")
