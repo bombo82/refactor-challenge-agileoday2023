@@ -7,8 +7,8 @@ class FizzBuzz : FizzBuzzInterface {
         val fizzDivisorAndWord = Pair(3, "Fizz")
         val divisorAndWordList = listOf(fizzDivisorAndWord)
         for (divisorAndWord in divisorAndWordList) {
-            if (number % fizzDivisorAndWord.first == 0) {
-                accumulator += fizzDivisorAndWord.second
+            if (number % divisorAndWord.first == 0) {
+                accumulator += divisorAndWord.second
             }
         }
 
