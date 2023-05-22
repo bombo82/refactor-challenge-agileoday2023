@@ -10,7 +10,7 @@ class FizzBuzz(
 
         var accumulator = ""
         for (divisorAndWord in divisorAndWordList) {
-            accumulator += divisorAndWord.getWordOrEmpty(number, divisorAndWord)
+            accumulator += divisorAndWord.getWordOrEmpty(number)
         }
 
         return accumulator.ifEmpty { number.toString() }
