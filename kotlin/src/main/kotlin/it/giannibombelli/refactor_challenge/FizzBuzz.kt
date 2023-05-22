@@ -6,9 +6,7 @@ class FizzBuzz(
         DivisorAndWord(5, "Buzz")
     )
 ) : FizzBuzzInterface {
-    override fun say(number: Int): String {
-        return divisorAndWordList
-            .joinToString("") { it.getWordOrEmpty(number) }
-            .ifEmpty { number.toString() }
-    }
+    override fun say(number: Int): String = divisorAndWordList
+        .joinToString("") { it.getWordOrEmpty(number) }
+        .ifEmpty { number.toString() }
 }
