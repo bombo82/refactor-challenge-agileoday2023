@@ -2,10 +2,6 @@ package it.giannibombelli.refactor_challenge
 
 class FizzBuzz : FizzBuzzInterface {
     override fun say(number: Int): String {
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "Fizz" + "Buzz"
-        }
-
         var accumulator = ""
         if (number % 3 == 0) {
             accumulator += "Fizz"
