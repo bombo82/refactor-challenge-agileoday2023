@@ -10,13 +10,16 @@ class FizzBuzz(
 
         var accumulator = ""
         for (divisorAndWord in divisorAndWordList) {
-            accumulator += if (number % divisorAndWord.divisor == 0) {
-                divisorAndWord.word
-            } else {
-                ""
-            }
+            accumulator += getWordOrEmpty(number, divisorAndWord)
         }
 
         return accumulator.ifEmpty { number.toString() }
     }
+
+    private fun getWordOrEmpty(number: Int, divisorAndWord: DivisorAndWord) =
+        if (number % divisorAndWord.divisor == 0) {
+            divisorAndWord.word
+        } else {
+            ""
+        }
 }
