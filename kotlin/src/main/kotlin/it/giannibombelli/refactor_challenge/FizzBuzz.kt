@@ -10,10 +10,10 @@ class FizzBuzz : FizzBuzzInterface {
             accumulator += "Buzz"
         }
 
-        if (accumulator.isNotEmpty()) {
-            return accumulator
+        return if (accumulator.isNotEmpty()) {
+            accumulator
         } else {
-            return number.toString()
+            number.toString()
         }
     }
 }
