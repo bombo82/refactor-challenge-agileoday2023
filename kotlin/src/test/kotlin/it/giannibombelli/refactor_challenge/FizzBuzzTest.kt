@@ -1,36 +1,44 @@
 package it.giannibombelli.refactor_challenge
 
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 
 internal class FizzBuzzTest {
 
-    @Test
-    internal fun `no match`() {
-        val fizzBuzz = FizzBuzz(listOf(
-            DivisorAndWord(3, "Fizz"),
-            DivisorAndWord(5, "Buzz")
-        ))
-        assertEquals("1", fizzBuzz.say(1))
-        assertEquals("2", fizzBuzz.say(2))
+    @ParameterizedTest
+    @CsvSource("1, 1", "1, 1")
+    internal fun `no match`(number: Int, expected: String) {
+        val fizzBuzz = FizzBuzz(
+            listOf(
+                DivisorAndWord(3, "Fizz"),
+                DivisorAndWord(5, "Buzz")
+            )
+        )
+        assertEquals(expected, fizzBuzz.say(number))
     }
 
-    @Test
-    internal fun `simple match`() {
-        val fizzBuzz = FizzBuzz(listOf(
-            DivisorAndWord(3, "Fizz"),
-            DivisorAndWord(5, "Buzz")
-        ))
-        assertEquals("Fizz", fizzBuzz.say(3))
-        assertEquals("Buzz", fizzBuzz.say(5))
+    @ParameterizedTest
+    @CsvSource("3, Fizz", "5, Buzz")
+    internal fun `simple match`(number: Int, expected: String) {
+        val fizzBuzz = FizzBuzz(
+            listOf(
+                DivisorAndWord(3, "Fizz"),
+                DivisorAndWord(5, "Buzz")
+            )
+        )
+        assertEquals(expected, fizzBuzz.say(number))
     }
 
-    @Test
-    internal fun `multiple match`() {
-        val fizzBuzz = FizzBuzz(listOf(
-            DivisorAndWord(3, "Fizz"),
-            DivisorAndWord(5, "Buzz")
-        ))
-        assertEquals("FizzBuzz", fizzBuzz.say(15))
+    @ParameterizedTest
+    @CsvSource("15, FizzBuzz")
+    internal fun `multiple match`(number: Int, expected: String) {
+        val fizzBuzz = FizzBuzz(
+            listOf(
+                DivisorAndWord(3, "Fizz"),
+                DivisorAndWord(5, "Buzz")
+            )
+        )
+        assertEquals(expected, fizzBuzz.say(number))
     }
 }
