@@ -12,6 +12,8 @@ class FizzBuzz(
         for (divisorAndWord in divisorAndWordList) {
             if (number % divisorAndWord.divisor == 0) {
                 accumulator += divisorAndWord.word
+            } else {
+                accumulator += ""
             }
         }
 
