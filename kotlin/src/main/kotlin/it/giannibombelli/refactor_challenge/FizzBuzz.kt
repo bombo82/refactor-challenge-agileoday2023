@@ -13,6 +13,8 @@ class FizzBuzz(
             accumulator += divisorAndWord.getWordOrEmpty(number)
         }
 
-        return accumulator.ifEmpty { number.toString() }
+        return divisorAndWordList
+            .joinToString("") { it.getWordOrEmpty(number) }
+            .ifEmpty { number.toString() }
     }
 }
