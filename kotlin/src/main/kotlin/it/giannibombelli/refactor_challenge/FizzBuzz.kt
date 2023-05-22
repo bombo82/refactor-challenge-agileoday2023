@@ -5,6 +5,8 @@ class FizzBuzz : FizzBuzzInterface {
         if (number % 3 == 0 && number % 5 == 0) {
             return "Fizz" + "Buzz"
         }
+
+        var accumulator = ""
         if (number % 3 == 0) {
             return "Fizz"
         }
@@ -12,6 +14,9 @@ class FizzBuzz : FizzBuzzInterface {
             return "Buzz"
         }
 
+        if (accumulator.isNotEmpty()) {
+            return accumulator
+        }
         return number.toString()
     }
 }
