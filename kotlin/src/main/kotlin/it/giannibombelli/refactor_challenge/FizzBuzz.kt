@@ -1,11 +1,12 @@
 package it.giannibombelli.refactor_challenge
 
-class FizzBuzz : FizzBuzzInterface {
+class FizzBuzz(
+    private val divisorAndWordList: List<Pair<Int, String>> = listOf(
+        Pair(3, "Fizz"),
+        Pair(5, "Buzz")
+    )
+) : FizzBuzzInterface {
     override fun say(number: Int): String {
-        val divisorAndWordList = listOf(
-            Pair(3, "Fizz"),
-            Pair(5, "Buzz")
-        )
 
         var accumulator = ""
         for (divisorAndWord in divisorAndWordList) {
